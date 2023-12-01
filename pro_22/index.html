@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Ice cream SVG Animation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="wrapper" ontouchstart="">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 600" preserveAspectRatio="xMaxYMin meet">
+        <defs>
+            <linearGradient id="gradient_melt2" x1="50%" y1="0%" x2="50%" y2="100%" >
+                <stop offset="0%" style="stop-color:rgb(255, 255, 255);stop-opacity:0" />
+                <stop offset="20%" style="stop-color:rgb(255, 255, 255);stop-opacity:0.3" />
+                <stop offset="40%" style="stop-color:rgb(255, 255, 255);stop-opacity:1" />
+            </linearGradient>
+
+            <filter id="filter_sunBlur" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+            </filter>
+
+            <linearGradient id="gradient_cloud1" x1="658.39" y1="-55.99" x2="646.49" y2="574.71" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#fff4ff"/>
+                <stop offset="0.2" stop-color="#fbf3fe"/>
+                <stop offset="0.38" stop-color="#f0f0fc"/>
+                <stop offset="0.56" stop-color="#ddecf7"/>
+                <stop offset="0.73" stop-color="#c3e5f2"/>
+                <stop offset="0.91" stop-color="#a1ddea"/>
+                <stop offset="1" stop-color="#8bd7e5"/>
+            </linearGradient>
+
+            <linearGradient id="gradient_cloud2" x1="623.27" y1="84.56" x2="628.08" y2="789.71" xlink:href="#gradient_cloud1"/>
+
+            <linearGradient id="gradient_cloud3" x1="624.83" y1="567.32" x2="624.83" y2="818.88" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#fff4ff"/>
+                <stop offset="1" stop-color="#ded7e5"/>
+            </linearGradient>
+
+            <path id="cloud" d="M1429.3,399.4a98.2,98.2,0,0,0-97.1-98.2,42.6,42.6,0,0,0-81.6,17,43.7,43.7,0,0,0,4.5,19.1,97.8,97.8,0,0,0-22.1,62.1,92.3,92.3,0,0,0,.7,11.8,98.2,98.2,0,0,0-82,59.1,41.8,41.8,0,0,0-16.6-3.4,42.6,42.6,0,0,0-42.6,42.6,40.7,40.7,0,0,0,2.3,13.5,76,76,0,0,0-69,57,44,44,0,0,0-8.3-.9A39.5,39.5,0,0,0,987,593.5a113.1,113.1,0,0,0-81.7-34.8h-4.1a42.4,42.4,0,0,0-74.8-5.9,39.3,39.3,0,0,0-45.1,6.4,98.2,98.2,0,0,0-167.4-49.2A75.8,75.8,0,0,0,559,534.7a94,94,0,0,0-16.9-1.5A97.5,97.5,0,0,0,471.8,563a39.5,39.5,0,0,0-68,12.5,116.8,116.8,0,0,0-28.2-12.4c.3-2.2,8.4-50.1-42-49.4a43,43,0,0,0-40.8,30.5,96.3,96.3,0,0,0-10.8-.7,87.8,87.8,0,0,0-40.9,10.1,87.8,87.8,0,0,0-138-68A98.3,98.3,0,0,0,16,411.2a115,115,0,0,0,.7-11.8A98.1,98.1,0,0,0-45,308.2V591.8c.6.4,0,63.2,0,63.2H1314.5a113.3,113.3,0,0,0-21.5-62.1c28.2-17.3,46.8-91.8,46.3-95.7A98.2,98.2,0,0,0,1429.3,399.4Z"/>
+        </defs>
+
+        <!-- CLOUDS -->
+        <use xlink:href="#cloud" id="cloud1" fill="url(#gradient_cloud1)"   x="-40" y="-100" />
+        <use xlink:href="#cloud" id="cloud2" fill="url(#gradient_cloud2)"   x="40" y="-60" />
+        <use xlink:href="#cloud" id="cloud3" fill="url(#gradient_cloud3)"  x="0" y="0" />
+
+
+        <!-- Human HAND img -->
+        <image id="img" width="1280" height="600" xlink:href="https://user-images.githubusercontent.com/26748614/112760187-6e49f700-8ff6-11eb-8567-ae05efa64a09.png" />
+
+
+        <!-- ICE CREAM PARTS-->
+        <path id="eyebrow_left" class="ice_parts2" d="M908.5,140.5s6-7,13-7" />    
+        <path id="eye_left" class="ice_parts" d="M911.8,159.3c-4.2-6.5-1-18,12.3-18.3s14.1,15.3,7.6,16.6S916.8,167.1,911.8,159.3Z"/>
+        <circle id="pupil_left" cx="924.9" cy="149.9" r="2.5" />
+
+        <path id="eyebrow_right" class="ice_parts2" d="M994.2,140.1s-6.3-7.6-13.5-6.2"/>
+        <path id="eye_right" class="ice_parts" d="M991.1,158.9c4.1-6.4,1-18-12.3-18.3s-14.2,15.4-7.6,16.6S986,166.7,991.1,158.9Z"/>
+        <circle id="pupil_right" cx="977.9" cy="149.5" r="2.5" />
+
+        <path id="mouth" fill="#747472" stroke-width="1px" stroke="black"
+            d="M951.1,171.5c-14.9,0-37.9,13.3-35,23.9s20.9,1.9,35,1.9,32,8.7,34.9-1.9S966,171.5,951.1,171.5Z"/>
+        <path id="tongue" fill="#ffc5d3"
+            d="M949.8,185.4c-8.2.1-15.1,7.1-16.3,13.6,5.7-1,11.9-2.4,17.6-2.4s12.5,1.5,18.3,2.5C966.9,189.6,957.3,185.3,949.8,185.4Z"/>
+
+        <path id="arm_left" class="ice_parts"
+            d="M891,183.6a4.2,4.2,0,0,0,3.1-2h0a5.2,5.2,0,0,0,.6-2.8,3.4,3.4,0,0,0-4-3.1l-4.3.4c-17.4.9-100.7-33.4-102.2-46.7s-8.2-13.6-5.4-4.1c-10-9.7-18.7-7-4.4,4.2-9.5-2.6-21.6,3.8-2.8,5.6-10.2,2.5-13.6,10-.4,7.3S858,188.5,888.9,184Z"/>
+        <path id="arm_right" class="ice_parts"
+            d="M1014.8,179.7a4.1,4.1,0,0,1-3.1-2.1h0a4.5,4.5,0,0,1-.6-2.8,3.5,3.5,0,0,1,3.9-3.2l4.3.4c17.4.7,100.5-34.2,101.8-47.5s8.2-13.7,5.4-4.2c9.9-9.7,18.6-7.2,4.4,4.2,9.5-2.7,21.7,3.6,2.9,5.5,10.2,2.5,13.7,10,.4,7.3s-86.4,47-117.3,42.7Z"/>
+
+        <path id="drop1" class="ice_parts" d="M914.1,243.3a6.6,6.6,0,0,1-4.2-1.3c-3.3-3,.5-15.8,2.7-22,5.5,10.4,7.8,18.1,6.3,21.2-.6,1.3-2.5,2.1-4.8,2.1Z"/>
+        <path id="melt1" class="ice_parts" d="M902.9,216.1c4.5,7.3,1.6,25.9,12,25.9s4.2-19.4,8.1-22.6" />
+
+        <path id="melt2" stroke="#000" stroke-width="1.2px" fill="url(#gradient_melt2)" d="M969.2,211.8c12.9,0,1.1,22.8,18.9,22.8,14.1,0,6-26.8,20.5-30.4"/>
+
+        <path id="melt3_inside" fill="#f5f2ee"
+            d="M1022.2,199.9c.2.4-2.3-.5-2.2,0s-.1,2.4,0,3,.6,2.3.9,3.4a2.9,2.9,0,0,0,1.8,2,1.3,1.3,0,0,0,1.8,0c3.9,1.6,2.9,2.2,2.7,5.5a20.3,20.3,0,0,1-3.6,9.7c-1.8,1.9-.9,1.9-.9,3.7s-.7,3.5-.9,4.5c-2.2,5.4-3,11.4-4.5,17.1-.9,3.5-.9,7-1.9,10.3-2.2,7.3-2.9,13.4-4.5,24.8a3.1,3.1,0,0,1-.2.7.6.6,0,0,0-.1.4h0c19.2,5.5,19.3-16.8,13.1-24.4s8.8-28.2,10.2-40.6C1034.6,213.9,1032.7,204.4,1022.2,199.9Z"/>
+
+        <path id="melt3_border" class="ice_parts"
+            d="M1010.5,285.1s12.6,4.5,16.2-7.6c0,0,2.7-7.7-4.5-19.3,0,0-.4-8.7,9.1-28.5s-10.8-31.8-11.3-30.4"/>
+
+        <path id="melt4_inside" fill="#f5f2ee"
+            d="M1009.3,293.2l-6,25.9a42.7,42.7,0,0,0,22.9,13.2s6.6,1.5,8.8,2.4,10.6,6.6,10.6,6.6,7.4,6.7,6.6,11.2c-2.5,13.9-6.4,45.5,6.6,45.1s3-18.1,7.5-37.6-6.7-25.1-22.9-27.9-34.8-30-34.1-39.1v.2c-.1.5-.3.9-.4,1.3"/>
+        <path id="melt4_border" class="ice_parts2"
+            d="M1052,352s-8.4,41.8,4.3,45.9c0,0,12.2,2.6,9.1-16.1.1-5.3-.9-16.3,1.1-22.3s-1-19-6.5-21.9c-3.9-3.2-19.2-6.1-19.2-6.1s-22.3-7-31.3-38" />
+
+        <path id="drop5" class="ice_parts" d="M958.1,517s-13.2,22.2-8.2,27.3c2.2,2.3,10.7,2.4,12.8,0C967.3,539.1,958.1,517,958.1,517ZZ"/>
+
+        <path id="melt5_inside" fill="#f5f2ee"
+            d="M981,452.3c-3,17.7-11.8,34.5-16.3,52-.8,3.2-2.1,8-4.5,10.3s-3.5.7-5.4,2.1-2.8,2.3-5.8,8.5c-1,9.8-3.7,20.1,0,24.8,2.1,2.7,13.3,5.3,15-1.5s.1-26.5.1-26.5,4.9-4,7-13.2c1.6-4.8,2.5-13,5-19.7,5.9-12.1,3.6-21.8,4.8-35.1C980.6,455,981.3,451.3,981,452.3Z"/>
+        <path id="melt5_border" stroke-width="1px" stroke="black" fill="none"
+            d="M952,518s-8.5,24.5-2.5,32.5c2.3,3.6,15,6,15-8.3-.5-18.7.2-20.1.2-20.1s5.1-2.7,8-20.6c0,0,1-10.7,4.9-15.4s3.9-33.6,3.9-33.6" />
+
+        
+        <!--  S  U  N -->
+        <g id="sun">
+            <circle id="shine" filter="url(#filter_sunBlur)" fill="rgba(255,206,44,0.6)" cx="332" cy="32" r="183" />
+            <path  id="s5" fill="#ff952c" d="M500.7-59.8c-14.1-12-34.2-8.5-50.8-12.7s-29.8-14.2-41.7-27c-25-27.3-47.1-70.1-89.9-42.5-16.4,10.5-28,27-44.5,37.8s-33.1,16-51.1,21.8c-16.3,5.3-37.7,11.1-46.8,27.3-10.6,18.8,3.3,37.2,4.6,56.3,2.6,37.5-37.9,65.9-30.2,103.8,7,34.4,59.2,37.6,81.2,60.2,27,27.7,37.4,66.5,83.7,48.7,16.8-6.4,30.7-18.7,47.8-24.4,23.1-7.8,47.2-3.8,71-6.2,54.8-5.4,45.5-63.3,52.2-104.4,4.2-25.9,11.7-50.4,19.7-75.4C512.4-16.4,519.4-43.7,500.7-59.8Z"/>
+            <circle id="s4" fill="#ffcb4a"  cx="332.4" cy="36.3" r="135.8"/>
+            <path id="s3" fill="#ffdc82" d="M426.8-27c-19.4-43.1-64.1-63.7-109.6-58-47.7,5.8-88,34.1-100.9,82.8-6.3,23.8,5.1,47.8,22.6,63.8,8.7,8,19.2,13,28.8,19.6s16.8,16,24.2,26.1c25.7,35.3,75.5,33.7,108,8.6C441,84.2,447.2,18.3,426.8-27Z"/>
+            <path id="s2" fill="#ffe6a6" d="M416.5-8.3c-4.4-40-37.6-62.6-74.9-66.7-15.7-1.8-34.8-2.1-48.5,6.6C274.4-56.5,276.2-37.8,278.2-19s-5,39.8,11.6,53.4c12.8,10.5,37,19.3,52.7,23.4C385.6,69.1,421.1,34.7,416.5-8.3Z"/>
+            <path id="s1" fill="#ffeec2"  d="M375.3,23.5c-5.1,16.7-28,24.5-51,17.4s-37.7-26.3-32.5-43,27.9-24.6,51-17.5S380.4,6.7,375.3,23.5Z"/>
+        </g>
+
+
+
+        <!-- S M I L    A N I M A T I O N -->
+
+        <!-- PUPIL LEFT -->
+        <animateTransform
+            xlink:href="#pupil_left"
+            attributeName="transform" 
+            type="translate"
+            dur="2s" 
+            begin="0" 
+            repeatCount="indefinite" 
+            values="0 0 ; -7 2 ; 0 0"
+        />
+
+        <!-- PUPIL RIGHT -->
+        <animateTransform
+            xlink:href="#pupil_right"
+            attributeName="transform" 
+            type="translate"
+            dur="2s" 
+            begin="0" 
+            repeatCount="indefinite" 
+            values="0 0 ; -7 2 ; 0 0"
+        />
+
+        <!-- EYEBROW LEFT -->
+        <animate 
+            xlink:href="#eyebrow_left"
+            attributeName="d" 
+            dur="2s" 
+            begin="0" 
+            fill="freeze"
+            repeatCount="indefinite" 
+            values="M908.5,140.5s6-7,13-7 ; M908.5,140.5s7-17,13-7 ; M908.5,140.5s6-7,13-7"
+        />
+
+        <!-- EYEBROW RIGHT -->
+        <animate 
+            xlink:href="#eyebrow_right"
+            attributeName="d" 
+            dur="2s" 
+            begin="0" 
+            fill="freeze"
+            repeatCount="indefinite" 
+            values="M994.2,140.1s-6.3-7.6-13.5-6.2 ; M994.2,140.1s-6.7-15.6-13.5-6.2 ;  M994.2,140.1s-6.3-7.6-13.5-6.2;"
+        />
+
+        <!-- MOUTH -->
+        <animate 
+            xlink:href="#mouth"
+            attributeName="d" 
+            dur="4s" 
+            begin="0" 
+            fill="freeze"
+            repeatCount="indefinite" 
+            values="
+            M951.1,171.5c-14.9,0-37.9,13.3-35,23.9s20.9,1.9,35,1.9,32,8.7,34.9-1.9S966,171.5,951.1,171.5Z ;
+            M951.1,167.5c-14.9,0-37.9,17.3-35,27.9s20.9,8.1,35,8.1,32,2.5,34.9-8.1S966,167.5,951.1,167.5Z ;
+            M950.9,170.5c-11.4,0-29.1,13.3-26.8,21.5s16,8.7,26.8,8.7,24.6-.6,26.9-8.7S962.4,170.5,950.9,170.5Z ;
+            M950.5,171c-7.8,0-19.9,11.8-18.4,19s11,7.7,18.4,7.7,16.8-.6,18.4-7.7S958.3,171,950.5,171Z ;
+            M951.1,171.5c-14.9,0-37.9,13.3-35,23.9s20.9,1.9,35,1.9,32,8.7,34.9-1.9S966,171.5,951.1,171.5Z"
+        />
+
+        <!-- TONGUE -->
+        <animate 
+            xlink:href="#tongue"
+            attributeName="d" 
+            dur="4s" 
+            begin="0" 
+            fill="freeze"
+            repeatCount="indefinite" 
+            values="
+            M949.8,185.4c-8.2.1-15.1,7.1-16.3,13.6,5.7-1,11.9-2.4,17.6-2.4s12.5,1.5,18.3,2.5C966.9,189.6,957.3,185.3,949.8,185.4Z ;
+            M949.7,191c-8.4.1-15.5,6.3-16.7,12.1,5.6.8,18.1,0,18.1,0s13.3.8,18.8.1C967.4,194.7,957.5,190.9,949.7,191Z ;
+            M951,191c-7.1.1-14.9,2.2-15.9,7.1C935,201,951,200,951,200s15,1,16.9-1.9C965.7,191,957.5,190.9,951,191Z ;
+            M950,188c-5.4.1-9.9,4-10.7,7.7,3.6.6,11.6,0,11.6,0s8.5.6,12,.1C961.3,190.4,955,188,950,188Z ;
+            M949.8,185.4c-8.2.1-15.1,7.1-16.3,13.6,5.7-1,11.9-2.4,17.6-2.4s12.5,1.5,18.3,2.5C966.9,189.6,957.3,185.3,949.8,185.4Z"
+        />
+
+        <!-- LEFT ARM -->
+        <animateTransform 
+            xlink:href="#arm_left"
+            attributeName="transform" 
+            type="rotate"
+            dur="2s"
+            begin="0s"
+            repeatCount="indefinite"
+            calcMode="spline"                  
+            keySplines=".11,.63,1,1 ; 0.1,0.1,1,1" 
+            keyTimes="0 ; 0.5 ; 1"
+            values="0 ; 43 ; 0"
+        />
+
+        <!-- RIGHT ARM -->
+        <animateTransform 
+            xlink:href="#arm_right"
+            attributeName="transform" 
+            type="rotate"
+            dur="2s"
+            begin="0s"
+            repeatCount="indefinite"
+            calcMode="spline"                  
+            keySplines=".11,.63,1,1 ; 0.1,0.1,1,1" 
+            keyTimes="0 ; 0.5 ; 1"
+            values="0 ; -35 ; 0"
+        />
+
+        <!-- MELT1 -->
+        <animate 
+            xlink:href="#melt1"
+            attributeName="d" 
+            dur="2s" 
+            begin="0" 
+            fill="freeze"
+            repeatCount="indefinite" 
+            values="M902.9,216.1c4.5,7.3,1.6,25.9,12,25.9s4.2-19.4,8.1-22.6 ;
+                    M902.9,216.1c15.6,4.4-1.4,29.4,12,28.4s-10.4-34,8.1-25.1 ;
+                    M902.4,215.2c5,4.6.5,15.1,8.9,14.6s8.6-9.2,12.1-11.9 ;
+                    M902.9,216.1c4.5,7.3,1.6,25.9,12,25.9s4.2-19.4,8.1-22.6"
+        />
+
+        <!-- DROP 1 -->
+        <animateTransform 
+            xlink:href="#drop1"
+            id="drop1_ani"
+            attributeName="transform" 
+            type="translate"
+            dur="4s"
+            begin="0s"
+            repeatCount="indefinite"
+            calcMode="spline"
+            keyTimes="0 ; 1"
+            keySplines=".15,.71,1,1"
+            from="0 0"
+            to="30 250"
+        />
+
+        <!-- MELT2 -->
+        <animate 
+            xlink:href="#melt2"
+            attributeName="d" 
+            dur="2s" 
+            begin="0" 
+            fill="freeze"
+            repeatCount="indefinite" 
+            values="M969.2,211.8c12.9,0,1.1,22.8,18.9,22.8,14.1,0,6-26.8,20.5-30.4
+            ;
+            M969.2,211.8c17.3-.3,1.1,27.7,18.9,27.7,14.1,0,2.4-33,20.5-35.3
+            ;
+            M969.2,211.8c12.9,0,1.1,22.8,18.9,22.8,14.1,0,6-26.8,20.5-30.4"
+        />
+
+        <!-- MELT4 border -->
+        <animate 
+            xlink:href="#melt4_border"
+            attributeName="d" 
+            dur="2s" 
+            begin="0" 
+            fill="freeze"
+            repeatCount="indefinite" 
+            values="M1052,352s-8.4,41.8,4.3,45.9c0,0,12.2,2.6,9.1-16.1.1-5.3-.9-16.3,1.1-22.3s-1-19-6.5-21.9c-3.9-3.2-19.2-6.1-19.2-6.1s-22.3-7-31.3-38
+            ;
+            M1052,352s-12.2,38.4.5,42.5c0,0,16,6,12.9-12.7.1-5.3-.9-16.3,1.1-22.3s-1-19-6.5-21.9c-3.9-3.2-19.2-6.1-19.2-6.1s-22.3-7-31.3-38
+            ;
+            M1052,352s-8.4,41.8,4.3,45.9c0,0,12.2,2.6,9.1-16.1.1-5.3-.9-16.3,1.1-22.3s-1-19-6.5-21.9c-3.9-3.2-19.2-6.1-19.2-6.1s-22.3-7-31.3-38"
+        />
+
+        <!-- MELT4 inside -->
+        <animate 
+            xlink:href="#melt4_inside"
+            attributeName="d" 
+            dur="2s" 
+            begin="0" 
+            fill="freeze"
+            repeatCount="indefinite" 
+            values="M1009.3,293.2l-6,25.9a42.7,42.7,0,0,0,22.9,13.2s6.6,1.5,8.8,2.4,10.6,6.6,10.6,6.6,7.4,6.7,6.6,11.2c-2.5,13.9-6.4,45.5,6.6,45.1s3-18.1,7.5-37.6-6.7-25.1-22.9-27.9-34.8-30-34.1-39.1v.2c-.1.5-.3.9-.4,1.3
+            ;
+            M1009.3,293.2l-6,25.9a42.7,42.7,0,0,0,22.9,13.2s6.6,1.5,8.8,2.4,10.6,6.6,10.6,6.6,7.4,6.7,6.6,11.2c-2.5,13.9-13.2,44.5,6.6,42.5,13-.4,3-15.5,7.5-35s-6.7-25.1-22.9-27.9-34.8-30-34.1-39.1v.2c-.1.5-.3.9-.4,1.3
+            ;
+            M1009.3,293.2l-6,25.9a42.7,42.7,0,0,0,22.9,13.2s6.6,1.5,8.8,2.4,10.6,6.6,10.6,6.6,7.4,6.7,6.6,11.2c-2.5,13.9-6.4,45.5,6.6,45.1s3-18.1,7.5-37.6-6.7-25.1-22.9-27.9-34.8-30-34.1-39.1v.2c-.1.5-.3.9-.4,1.3"
+        />
+
+        <!-- MELT5 inside -->
+        <animate 
+            xlink:href="#melt5_inside"
+            attributeName="d" 
+            dur="2s" 
+            begin="0" 
+            fill="freeze"
+            repeatCount="indefinite" 
+            values="M981,452.3c-3,17.7-11.8,34.5-16.3,52-.8,3.2-2.1,8-4.5,10.3s-3.5.7-5.4,2.1-2.8,2.3-5.8,8.5c-1,9.8-3.7,20.1,0,24.8,2.1,2.7,13.3,5.3,15-1.5s.1-26.5.1-26.5,4.9-4,7-13.2c1.6-4.8,2.5-13,5-19.7,5.9-12.1,3.6-21.8,4.8-35.1C980.6,455,981.3,451.3,981,452.3Z
+            ;
+            M981,452.3c-3,17.7-11.8,34.5-16.3,52-.8,3.2-2.1,8-4.5,10.3s-3.5.7-5.4,2.1-5.2,4.4-5.8,8.5c-5,8.8-3.7,15.1,0,19.8,2.1,2.7,16.3,3.8,18-3s-2.9-20-2.9-20,4.9-4,7-13.2c1.6-4.8,2.5-13,5-19.7,5.9-12.1,3.6-21.8,4.8-35.1C980.6,455,981.3,451.3,981,452.3Z
+            ;
+            M981,452.3c-3,17.7-11.8,34.5-16.3,52-.8,3.2-2.1,8-4.5,10.3s-3.5.7-5.4,2.1-2.8,2.3-5.8,8.5c-1,9.8-3.7,20.1,0,24.8,2.1,2.7,13.3,5.3,15-1.5s.1-26.5.1-26.5,4.9-4,7-13.2c1.6-4.8,2.5-13,5-19.7,5.9-12.1,3.6-21.8,4.8-35.1C980.6,455,981.3,451.3,981,452.3Z"
+        />
+
+        <!-- MELT5 border -->
+        <animate 
+            xlink:href="#melt5_border"
+            attributeName="d" 
+            dur="2s" 
+            begin="0" 
+            fill="freeze"
+            repeatCount="indefinite" 
+            values="M952,518s-8.5,24.5-2.5,32.5c2.3,3.6,15,6,15-8.3-.5-18.7.2-20.1.2-20.1s5.1-2.7,8-20.6c0,0,1-10.7,4.9-15.4s3.9-33.6,3.9-33.6
+            ;
+            M952,518s-10.5,16.5-4,25.5c2.5,6,15.1,4.7,17.5,1,5-6-.8-22.4-.8-22.4s5.1-2.7,8-20.6c0,0,1-10.7,4.9-15.4s3.9-33.6,3.9-33.6
+            ;
+            M952,518s-8.5,24.5-2.5,32.5c2.3,3.6,15,6,15-8.3-.5-18.7.2-20.1.2-20.1s5.1-2.7,8-20.6c0,0,1-10.7,4.9-15.4s3.9-33.6,3.9-33.6"
+        />
+
+        <!-- DROP5 -->
+        <animateTransform 
+            xlink:href="#drop5"
+            attributeName="transform" 
+            type="translate"
+            dur="4s"
+            begin="drop1_ani.begin + 4s"
+            repeatCount="indefinite"
+            calcMode="spline"
+            keyTimes="0 ; 1"
+            keySplines=".15,.71,1,1"
+            from="0 0"
+            to="0 500"
+        />
+
+        <!-- SUN -->
+        <animateTransform
+            xlink:href="#s5"
+            attributeName="transform" 
+            type="rotate"
+            dur="18s" 
+            begin="0" 
+            repeatCount="indefinite" 
+            to="360"
+        />
+        <animateTransform
+            xlink:href="#s4"
+            attributeName="transform" 
+            type="translate"
+            dur="4s" 
+            begin="0" 
+            repeatCount="indefinite" 
+            values="0 0 ; 0 -15 ; 0 0"
+        />
+        <animate 
+            xlink:href="#s3"
+            attributeName="d" 
+            dur="4s" 
+            begin="0" 
+            fill="freeze"
+            repeatCount="indefinite" 
+            values="M426.8-27c-19.4-43.1-64.1-63.7-109.6-58-47.7,5.8-88,34.1-100.9,82.8-6.3,23.8,5.1,47.8,22.6,63.8,8.7,8,45.6,35.6,53,45.7,25.7,35.3,75.5,33.7,108,8.6C441,84.2,447.2,18.3,426.8-27Z
+            ; 
+            M426.8-27c-19.4-43.1-64.1-63.7-109.6-58C269.5-79.2,241.9-49.7,229-1c-6.3,23.8-1.5,36,16,52,8.7,7.9,3,9,46.5,38.5,36.2,24.5,75.5,32.5,99,0C420.9,47.4,447.2,18.3,426.8-27Z
+            ;
+            M426.8-27c-19.4-43.1-64.1-63.7-109.6-58-47.7,5.8-88,34.1-100.9,82.8-6.3,23.8,5.1,47.8,22.6,63.8,8.7,8,45.6,35.6,53,45.7,25.7,35.3,75.5,33.7,108,8.6C441,84.2,447.2,18.3,426.8-27Z"
+        />
+        <animateTransform
+            xlink:href="#s2"
+            attributeName="transform" 
+            type="rotate"
+            dur="8s" 
+            begin="0" 
+            repeatCount="indefinite" 
+            to="360"
+        />
+
+        <!-- C L O U D S -->
+        <animateTransform
+            xlink:href="#cloud1"
+            attributeName="transform" 
+            type="translate"
+            dur="9s" 
+            begin="0" 
+            repeatCount="indefinite" 
+            values="0 0 ; 35 25 ; 0 0"
+        />
+
+        <animateTransform
+            xlink:href="#cloud2"
+            attributeName="transform" 
+            type="translate"
+            dur="4s" 
+            begin="2" 
+            repeatCount="indefinite" 
+            values="0 0 ; 25 15 ; 0 0"
+        />
+
+        <animateTransform
+            xlink:href="#cloud3"
+            attributeName="transform" 
+            type="translate"
+            dur="5s" 
+            begin="0.6" 
+            repeatCount="indefinite" 
+            values="0 0 ; -15 -5 ; 0 0"
+        />
+    </svg>
+  
+  <div class="btn btn_Fullscreen" id="fullscr">Go Fullscreen</div>
+</div>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

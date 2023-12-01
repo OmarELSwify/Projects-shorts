@@ -1,0 +1,59 @@
+body{
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+  background: #000;
+}
+.scope{
+  width: clamp(200px, 90vmin, 1200px);
+  height: clamp(200px, 90vmin, 1200px);
+  border-radius: 50%;
+  overflow: hidden;
+}
+canvas{
+  --blur-a: 0.1vmin;
+  --blur-b: 0.18vmin;
+  --contrast-a: 2;
+  --contrast-b: 10;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  canvas {
+    --contrast-b: 8;
+  }
+}
+
+@media (max-width: 600px) {
+  canvas {
+    --contrast-b: 4;
+  }
+}
+
+canvas.reset {
+  -webkit-animation: none;
+          animation: none;
+}
+
+@-webkit-keyframes filter-more {
+  from {
+    filter: blur(var(--blur-a)) contrast(var(--contrast-a));
+  }
+  to {
+    filter: blur(var(--blur-b)) contrast(var(--contrast-b));
+  }
+}
+
+@keyframes filter-more {
+  from {
+    filter: blur(var(--blur-a)) contrast(var(--contrast-a));
+  }
+  to {
+    filter: blur(var(--blur-b)) contrast(var(--contrast-b));
+  }
+}

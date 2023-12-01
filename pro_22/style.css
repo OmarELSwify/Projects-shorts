@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #fbf0fc;
+  overflow: hidden;
+}
+
+/* === SVG === */
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: radial-gradient(ellipse at 30% 30%, rgba(144, 221, 236, 1) 0%, rgba(89, 177, 213, 1) 50%);
+}
+
+svg .ice_parts {
+  fill: #f5f2ee;
+  stroke: #000;
+  stroke-miterlimit: 10;
+  stroke-width: 1.2px
+}
+
+svg .ice_parts2 {
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke-width: 1.2
+}
+
+svg #arm_left {
+  transform-origin: 100% 100%;
+  transform-box: fill-box;
+}
+
+svg #arm_right {
+  transform-origin: 0% 100%;
+  transform-box: fill-box;
+}
+
+svg #pupil_left, svg #pupil_right, svg #s5, svg #s2 {
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+}
+
+/* horizontal flip */
+svg #cloud2 {
+  transform: scale(-1, 1);
+  transform-origin: 50% 50%;
+}
+
+.btn_Fullscreen {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 3px 15px;
+    background-color: #1f1f1f;
+    color: #fdfcfc;
+    -webkit-font-smoothing: antialiased;
+    font-size: 18px;
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 5px 3px 12px 0px rgba(0, 0, 0, 0.75);
+    transition: color .3s;
+}
+
+.btn_Fullscreen:hover {
+    color: #c362f4;
+}

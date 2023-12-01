@@ -1,0 +1,1299 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    background: #000;
+    overflow: hidden;
+  }
+  
+  :root {
+    --headColor: hsl(130, 75%, 65%);
+    --bubbleColor: hsl(60, 75%, 30%);
+  }
+  
+  .g-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    padding: 100px;
+    filter: blur(0.2em) contrast(3);
+    background: #000;
+    -webkit-animation: rotate 4s infinite linear;
+            animation: rotate 4s infinite linear;
+  }
+  
+  .g-circle {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: conic-gradient(var(--headColor) 0, var(--headColor) 10%, #4de64d, #53e236, #60df20, #73c91d, #80b31a, #869c16, var(--bubbleColor) 25%, var(--bubbleColor) 35%, transparent 35%);
+    -webkit-mask: radial-gradient(transparent, transparent 119px, #000 120px, #000);
+            mask: radial-gradient(transparent, transparent 119px, #000 120px, #000);
+  }
+  .g-circle::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--headColor);
+    top: 0;
+    left: calc(50% - 15px);
+    border-radius: 50%;
+  }
+  
+  .g-bubbles {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    right: 120px;
+    top: 308px;
+    background: var(--bubbleColor);
+  }
+  
+  .g-bubble {
+    position: absolute;
+    border-radius: 50%;
+    background-color: inherit;
+  }
+  
+  .g-bubble:nth-child(1) {
+    --rotate: calc(23 * 1deg);
+    --dis: calc(37 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    -webkit-animation: move 2.898s ease-in-out -2.432s infinite;
+            animation: move 2.898s ease-in-out -2.432s infinite;
+  }
+  
+  .g-bubble:nth-child(2) {
+    --rotate: calc(67 * 1deg);
+    --dis: calc(59 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    -webkit-animation: move 2.032s ease-in-out -1.233s infinite;
+            animation: move 2.032s ease-in-out -1.233s infinite;
+  }
+  
+  .g-bubble:nth-child(3) {
+    --rotate: calc(349 * 1deg);
+    --dis: calc(91 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    -webkit-animation: move 1.662s ease-in-out -2.44s infinite;
+            animation: move 1.662s ease-in-out -2.44s infinite;
+  }
+  
+  .g-bubble:nth-child(4) {
+    --rotate: calc(196 * 1deg);
+    --dis: calc(22 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    -webkit-animation: move 2.375s ease-in-out -2.497s infinite;
+            animation: move 2.375s ease-in-out -2.497s infinite;
+  }
+  
+  .g-bubble:nth-child(5) {
+    --rotate: calc(138 * 1deg);
+    --dis: calc(35 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    -webkit-animation: move 2.595s ease-in-out -2.995s infinite;
+            animation: move 2.595s ease-in-out -2.995s infinite;
+  }
+  
+  .g-bubble:nth-child(6) {
+    --rotate: calc(278 * 1deg);
+    --dis: calc(86 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 19px;
+    height: 19px;
+    -webkit-animation: move 1.947s ease-in-out -0.014s infinite;
+            animation: move 1.947s ease-in-out -0.014s infinite;
+  }
+  
+  .g-bubble:nth-child(7) {
+    --rotate: calc(74 * 1deg);
+    --dis: calc(68 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 19px;
+    height: 19px;
+    -webkit-animation: move 2.678s ease-in-out -1.761s infinite;
+            animation: move 2.678s ease-in-out -1.761s infinite;
+  }
+  
+  .g-bubble:nth-child(8) {
+    --rotate: calc(301 * 1deg);
+    --dis: calc(55 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 13px;
+    height: 13px;
+    -webkit-animation: move 1.692s ease-in-out -0.986s infinite;
+            animation: move 1.692s ease-in-out -0.986s infinite;
+  }
+  
+  .g-bubble:nth-child(9) {
+    --rotate: calc(246 * 1deg);
+    --dis: calc(9 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9px;
+    height: 9px;
+    -webkit-animation: move 1.882s ease-in-out -1.033s infinite;
+            animation: move 1.882s ease-in-out -1.033s infinite;
+  }
+  
+  .g-bubble:nth-child(10) {
+    --rotate: calc(342 * 1deg);
+    --dis: calc(89 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 26px;
+    height: 26px;
+    -webkit-animation: move 2.798s ease-in-out -2.96s infinite;
+            animation: move 2.798s ease-in-out -2.96s infinite;
+  }
+  
+  .g-bubble:nth-child(11) {
+    --rotate: calc(95 * 1deg);
+    --dis: calc(97 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 11px;
+    height: 11px;
+    -webkit-animation: move 1.886s ease-in-out -1.429s infinite;
+            animation: move 1.886s ease-in-out -1.429s infinite;
+  }
+  
+  .g-bubble:nth-child(12) {
+    --rotate: calc(51 * 1deg);
+    --dis: calc(6 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    -webkit-animation: move 1.818s ease-in-out -2.644s infinite;
+            animation: move 1.818s ease-in-out -2.644s infinite;
+  }
+  
+  .g-bubble:nth-child(13) {
+    --rotate: calc(46 * 1deg);
+    --dis: calc(47 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    -webkit-animation: move 2.019s ease-in-out -0.881s infinite;
+            animation: move 2.019s ease-in-out -0.881s infinite;
+  }
+  
+  .g-bubble:nth-child(14) {
+    --rotate: calc(220 * 1deg);
+    --dis: calc(78 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    -webkit-animation: move 2.804s ease-in-out -2.045s infinite;
+            animation: move 2.804s ease-in-out -2.045s infinite;
+  }
+  
+  .g-bubble:nth-child(15) {
+    --rotate: calc(300 * 1deg);
+    --dis: calc(41 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    -webkit-animation: move 2.085s ease-in-out -2.326s infinite;
+            animation: move 2.085s ease-in-out -2.326s infinite;
+  }
+  
+  .g-bubble:nth-child(16) {
+    --rotate: calc(210 * 1deg);
+    --dis: calc(90 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    -webkit-animation: move 2.272s ease-in-out -1.449s infinite;
+            animation: move 2.272s ease-in-out -1.449s infinite;
+  }
+  
+  .g-bubble:nth-child(17) {
+    --rotate: calc(222 * 1deg);
+    --dis: calc(95 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    -webkit-animation: move 2.486s ease-in-out -2.971s infinite;
+            animation: move 2.486s ease-in-out -2.971s infinite;
+  }
+  
+  .g-bubble:nth-child(18) {
+    --rotate: calc(343 * 1deg);
+    --dis: calc(38 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 26px;
+    height: 26px;
+    -webkit-animation: move 2.19s ease-in-out -0.791s infinite;
+            animation: move 2.19s ease-in-out -0.791s infinite;
+  }
+  
+  .g-bubble:nth-child(19) {
+    --rotate: calc(128 * 1deg);
+    --dis: calc(5 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 13px;
+    height: 13px;
+    -webkit-animation: move 2.049s ease-in-out -1.85s infinite;
+            animation: move 2.049s ease-in-out -1.85s infinite;
+  }
+  
+  .g-bubble:nth-child(20) {
+    --rotate: calc(336 * 1deg);
+    --dis: calc(44 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    -webkit-animation: move 2.269s ease-in-out -0.092s infinite;
+            animation: move 2.269s ease-in-out -0.092s infinite;
+  }
+  
+  .g-bubble:nth-child(21) {
+    --rotate: calc(215 * 1deg);
+    --dis: calc(17 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    -webkit-animation: move 2.682s ease-in-out -1.046s infinite;
+            animation: move 2.682s ease-in-out -1.046s infinite;
+  }
+  
+  .g-bubble:nth-child(22) {
+    --rotate: calc(8 * 1deg);
+    --dis: calc(26 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 21px;
+    height: 21px;
+    -webkit-animation: move 2.012s ease-in-out -2.591s infinite;
+            animation: move 2.012s ease-in-out -2.591s infinite;
+  }
+  
+  .g-bubble:nth-child(23) {
+    --rotate: calc(40 * 1deg);
+    --dis: calc(10 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7px;
+    height: 7px;
+    -webkit-animation: move 2.595s ease-in-out -1.128s infinite;
+            animation: move 2.595s ease-in-out -1.128s infinite;
+  }
+  
+  .g-bubble:nth-child(24) {
+    --rotate: calc(67 * 1deg);
+    --dis: calc(96 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    -webkit-animation: move 1.922s ease-in-out -2.663s infinite;
+            animation: move 1.922s ease-in-out -2.663s infinite;
+  }
+  
+  .g-bubble:nth-child(25) {
+    --rotate: calc(192 * 1deg);
+    --dis: calc(44 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9px;
+    height: 9px;
+    -webkit-animation: move 1.651s ease-in-out -0.996s infinite;
+            animation: move 1.651s ease-in-out -0.996s infinite;
+  }
+  
+  .g-bubble:nth-child(26) {
+    --rotate: calc(145 * 1deg);
+    --dis: calc(18 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    -webkit-animation: move 1.761s ease-in-out -0.228s infinite;
+            animation: move 1.761s ease-in-out -0.228s infinite;
+  }
+  
+  .g-bubble:nth-child(27) {
+    --rotate: calc(54 * 1deg);
+    --dis: calc(27 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    -webkit-animation: move 1.833s ease-in-out -2.162s infinite;
+            animation: move 1.833s ease-in-out -2.162s infinite;
+  }
+  
+  .g-bubble:nth-child(28) {
+    --rotate: calc(8 * 1deg);
+    --dis: calc(24 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    -webkit-animation: move 2.573s ease-in-out -2.334s infinite;
+            animation: move 2.573s ease-in-out -2.334s infinite;
+  }
+  
+  .g-bubble:nth-child(29) {
+    --rotate: calc(10 * 1deg);
+    --dis: calc(66 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 27px;
+    height: 27px;
+    -webkit-animation: move 2.654s ease-in-out -1.986s infinite;
+            animation: move 2.654s ease-in-out -1.986s infinite;
+  }
+  
+  .g-bubble:nth-child(30) {
+    --rotate: calc(121 * 1deg);
+    --dis: calc(13 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 26px;
+    height: 26px;
+    -webkit-animation: move 2.606s ease-in-out -0.772s infinite;
+            animation: move 2.606s ease-in-out -0.772s infinite;
+  }
+  
+  .g-bubble:nth-child(31) {
+    --rotate: calc(225 * 1deg);
+    --dis: calc(2 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    -webkit-animation: move 1.851s ease-in-out -1.468s infinite;
+            animation: move 1.851s ease-in-out -1.468s infinite;
+  }
+  
+  .g-bubble:nth-child(32) {
+    --rotate: calc(299 * 1deg);
+    --dis: calc(98 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    -webkit-animation: move 2.904s ease-in-out -1.944s infinite;
+            animation: move 2.904s ease-in-out -1.944s infinite;
+  }
+  
+  .g-bubble:nth-child(33) {
+    --rotate: calc(50 * 1deg);
+    --dis: calc(12 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    -webkit-animation: move 2.056s ease-in-out -2.204s infinite;
+            animation: move 2.056s ease-in-out -2.204s infinite;
+  }
+  
+  .g-bubble:nth-child(34) {
+    --rotate: calc(329 * 1deg);
+    --dis: calc(49 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    -webkit-animation: move 1.879s ease-in-out -2.943s infinite;
+            animation: move 1.879s ease-in-out -2.943s infinite;
+  }
+  
+  .g-bubble:nth-child(35) {
+    --rotate: calc(107 * 1deg);
+    --dis: calc(26 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    -webkit-animation: move 1.523s ease-in-out -0.32s infinite;
+            animation: move 1.523s ease-in-out -0.32s infinite;
+  }
+  
+  .g-bubble:nth-child(36) {
+    --rotate: calc(222 * 1deg);
+    --dis: calc(22 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    -webkit-animation: move 1.89s ease-in-out -2.615s infinite;
+            animation: move 1.89s ease-in-out -2.615s infinite;
+  }
+  
+  .g-bubble:nth-child(37) {
+    --rotate: calc(326 * 1deg);
+    --dis: calc(18 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    -webkit-animation: move 1.665s ease-in-out -0.857s infinite;
+            animation: move 1.665s ease-in-out -0.857s infinite;
+  }
+  
+  .g-bubble:nth-child(38) {
+    --rotate: calc(340 * 1deg);
+    --dis: calc(28 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 27px;
+    height: 27px;
+    -webkit-animation: move 2.887s ease-in-out -2.099s infinite;
+            animation: move 2.887s ease-in-out -2.099s infinite;
+  }
+  
+  .g-bubble:nth-child(39) {
+    --rotate: calc(330 * 1deg);
+    --dis: calc(74 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 13px;
+    height: 13px;
+    -webkit-animation: move 2.175s ease-in-out -2.159s infinite;
+            animation: move 2.175s ease-in-out -2.159s infinite;
+  }
+  
+  .g-bubble:nth-child(40) {
+    --rotate: calc(356 * 1deg);
+    --dis: calc(8 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 21px;
+    height: 21px;
+    -webkit-animation: move 1.9s ease-in-out -1.706s infinite;
+            animation: move 1.9s ease-in-out -1.706s infinite;
+  }
+  
+  .g-bubble:nth-child(41) {
+    --rotate: calc(188 * 1deg);
+    --dis: calc(48 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    -webkit-animation: move 2.747s ease-in-out -1.313s infinite;
+            animation: move 2.747s ease-in-out -1.313s infinite;
+  }
+  
+  .g-bubble:nth-child(42) {
+    --rotate: calc(327 * 1deg);
+    --dis: calc(14 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+    -webkit-animation: move 2.534s ease-in-out -0.371s infinite;
+            animation: move 2.534s ease-in-out -0.371s infinite;
+  }
+  
+  .g-bubble:nth-child(43) {
+    --rotate: calc(248 * 1deg);
+    --dis: calc(90 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    -webkit-animation: move 2.763s ease-in-out -0.776s infinite;
+            animation: move 2.763s ease-in-out -0.776s infinite;
+  }
+  
+  .g-bubble:nth-child(44) {
+    --rotate: calc(347 * 1deg);
+    --dis: calc(74 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    -webkit-animation: move 2.381s ease-in-out -1.61s infinite;
+            animation: move 2.381s ease-in-out -1.61s infinite;
+  }
+  
+  .g-bubble:nth-child(45) {
+    --rotate: calc(137 * 1deg);
+    --dis: calc(87 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    -webkit-animation: move 2.88s ease-in-out -1.17s infinite;
+            animation: move 2.88s ease-in-out -1.17s infinite;
+  }
+  
+  .g-bubble:nth-child(46) {
+    --rotate: calc(91 * 1deg);
+    --dis: calc(97 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    -webkit-animation: move 1.951s ease-in-out -0.998s infinite;
+            animation: move 1.951s ease-in-out -0.998s infinite;
+  }
+  
+  .g-bubble:nth-child(47) {
+    --rotate: calc(5 * 1deg);
+    --dis: calc(75 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 23px;
+    height: 23px;
+    -webkit-animation: move 1.575s ease-in-out -1.671s infinite;
+            animation: move 1.575s ease-in-out -1.671s infinite;
+  }
+  
+  .g-bubble:nth-child(48) {
+    --rotate: calc(210 * 1deg);
+    --dis: calc(89 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 27px;
+    height: 27px;
+    -webkit-animation: move 2.589s ease-in-out -0.537s infinite;
+            animation: move 2.589s ease-in-out -0.537s infinite;
+  }
+  
+  .g-bubble:nth-child(49) {
+    --rotate: calc(207 * 1deg);
+    --dis: calc(31 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    -webkit-animation: move 1.595s ease-in-out -1.213s infinite;
+            animation: move 1.595s ease-in-out -1.213s infinite;
+  }
+  
+  .g-bubble:nth-child(50) {
+    --rotate: calc(277 * 1deg);
+    --dis: calc(75 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    -webkit-animation: move 1.634s ease-in-out -1.383s infinite;
+            animation: move 1.634s ease-in-out -1.383s infinite;
+  }
+  
+  .g-bubble:nth-child(51) {
+    --rotate: calc(167 * 1deg);
+    --dis: calc(48 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7px;
+    height: 7px;
+    -webkit-animation: move 2.401s ease-in-out -2.459s infinite;
+            animation: move 2.401s ease-in-out -2.459s infinite;
+  }
+  
+  .g-bubble:nth-child(52) {
+    --rotate: calc(103 * 1deg);
+    --dis: calc(58 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    -webkit-animation: move 1.505s ease-in-out -1.748s infinite;
+            animation: move 1.505s ease-in-out -1.748s infinite;
+  }
+  
+  .g-bubble:nth-child(53) {
+    --rotate: calc(69 * 1deg);
+    --dis: calc(14 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    -webkit-animation: move 1.935s ease-in-out -0.29s infinite;
+            animation: move 1.935s ease-in-out -0.29s infinite;
+  }
+  
+  .g-bubble:nth-child(54) {
+    --rotate: calc(231 * 1deg);
+    --dis: calc(90 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28px;
+    height: 28px;
+    -webkit-animation: move 2.953s ease-in-out -2.912s infinite;
+            animation: move 2.953s ease-in-out -2.912s infinite;
+  }
+  
+  .g-bubble:nth-child(55) {
+    --rotate: calc(286 * 1deg);
+    --dis: calc(34 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7px;
+    height: 7px;
+    -webkit-animation: move 1.725s ease-in-out -0.167s infinite;
+            animation: move 1.725s ease-in-out -0.167s infinite;
+  }
+  
+  .g-bubble:nth-child(56) {
+    --rotate: calc(301 * 1deg);
+    --dis: calc(33 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9px;
+    height: 9px;
+    -webkit-animation: move 1.924s ease-in-out -2.461s infinite;
+            animation: move 1.924s ease-in-out -2.461s infinite;
+  }
+  
+  .g-bubble:nth-child(57) {
+    --rotate: calc(7 * 1deg);
+    --dis: calc(64 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28px;
+    height: 28px;
+    -webkit-animation: move 2.505s ease-in-out -2.705s infinite;
+            animation: move 2.505s ease-in-out -2.705s infinite;
+  }
+  
+  .g-bubble:nth-child(58) {
+    --rotate: calc(149 * 1deg);
+    --dis: calc(51 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    -webkit-animation: move 1.757s ease-in-out -0.21s infinite;
+            animation: move 1.757s ease-in-out -0.21s infinite;
+  }
+  
+  .g-bubble:nth-child(59) {
+    --rotate: calc(265 * 1deg);
+    --dis: calc(2 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 13px;
+    height: 13px;
+    -webkit-animation: move 2.491s ease-in-out -1.011s infinite;
+            animation: move 2.491s ease-in-out -1.011s infinite;
+  }
+  
+  .g-bubble:nth-child(60) {
+    --rotate: calc(213 * 1deg);
+    --dis: calc(91 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    -webkit-animation: move 2.55s ease-in-out -2.211s infinite;
+            animation: move 2.55s ease-in-out -2.211s infinite;
+  }
+  
+  .g-bubble:nth-child(61) {
+    --rotate: calc(55 * 1deg);
+    --dis: calc(74 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 11px;
+    height: 11px;
+    -webkit-animation: move 2.099s ease-in-out -1.874s infinite;
+            animation: move 2.099s ease-in-out -1.874s infinite;
+  }
+  
+  .g-bubble:nth-child(62) {
+    --rotate: calc(281 * 1deg);
+    --dis: calc(99 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    -webkit-animation: move 1.653s ease-in-out -2.792s infinite;
+            animation: move 1.653s ease-in-out -2.792s infinite;
+  }
+  
+  .g-bubble:nth-child(63) {
+    --rotate: calc(299 * 1deg);
+    --dis: calc(76 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    -webkit-animation: move 1.734s ease-in-out -1.301s infinite;
+            animation: move 1.734s ease-in-out -1.301s infinite;
+  }
+  
+  .g-bubble:nth-child(64) {
+    --rotate: calc(162 * 1deg);
+    --dis: calc(44 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    -webkit-animation: move 1.803s ease-in-out -0.847s infinite;
+            animation: move 1.803s ease-in-out -0.847s infinite;
+  }
+  
+  .g-bubble:nth-child(65) {
+    --rotate: calc(343 * 1deg);
+    --dis: calc(54 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    -webkit-animation: move 2.997s ease-in-out -2.523s infinite;
+            animation: move 2.997s ease-in-out -2.523s infinite;
+  }
+  
+  .g-bubble:nth-child(66) {
+    --rotate: calc(304 * 1deg);
+    --dis: calc(79 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    -webkit-animation: move 2.812s ease-in-out -1.1s infinite;
+            animation: move 2.812s ease-in-out -1.1s infinite;
+  }
+  
+  .g-bubble:nth-child(67) {
+    --rotate: calc(348 * 1deg);
+    --dis: calc(45 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    -webkit-animation: move 2.958s ease-in-out -1.41s infinite;
+            animation: move 2.958s ease-in-out -1.41s infinite;
+  }
+  
+  .g-bubble:nth-child(68) {
+    --rotate: calc(346 * 1deg);
+    --dis: calc(8 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28px;
+    height: 28px;
+    -webkit-animation: move 2.564s ease-in-out -2.198s infinite;
+            animation: move 2.564s ease-in-out -2.198s infinite;
+  }
+  
+  .g-bubble:nth-child(69) {
+    --rotate: calc(172 * 1deg);
+    --dis: calc(88 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 17px;
+    height: 17px;
+    -webkit-animation: move 1.528s ease-in-out -1.751s infinite;
+            animation: move 1.528s ease-in-out -1.751s infinite;
+  }
+  
+  .g-bubble:nth-child(70) {
+    --rotate: calc(146 * 1deg);
+    --dis: calc(74 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    -webkit-animation: move 1.814s ease-in-out -1.55s infinite;
+            animation: move 1.814s ease-in-out -1.55s infinite;
+  }
+  
+  .g-bubble:nth-child(71) {
+    --rotate: calc(19 * 1deg);
+    --dis: calc(63 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    -webkit-animation: move 2.817s ease-in-out -1.265s infinite;
+            animation: move 2.817s ease-in-out -1.265s infinite;
+  }
+  
+  .g-bubble:nth-child(72) {
+    --rotate: calc(219 * 1deg);
+    --dis: calc(6 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    -webkit-animation: move 2.862s ease-in-out -0.02s infinite;
+            animation: move 2.862s ease-in-out -0.02s infinite;
+  }
+  
+  .g-bubble:nth-child(73) {
+    --rotate: calc(22 * 1deg);
+    --dis: calc(94 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 13px;
+    height: 13px;
+    -webkit-animation: move 2.03s ease-in-out -1.495s infinite;
+            animation: move 2.03s ease-in-out -1.495s infinite;
+  }
+  
+  .g-bubble:nth-child(74) {
+    --rotate: calc(203 * 1deg);
+    --dis: calc(92 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 17px;
+    height: 17px;
+    -webkit-animation: move 1.636s ease-in-out -0.64s infinite;
+            animation: move 1.636s ease-in-out -0.64s infinite;
+  }
+  
+  .g-bubble:nth-child(75) {
+    --rotate: calc(306 * 1deg);
+    --dis: calc(15 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 17px;
+    height: 17px;
+    -webkit-animation: move 2.026s ease-in-out -0.11s infinite;
+            animation: move 2.026s ease-in-out -0.11s infinite;
+  }
+  
+  .g-bubble:nth-child(76) {
+    --rotate: calc(222 * 1deg);
+    --dis: calc(67 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    -webkit-animation: move 2.387s ease-in-out -1.722s infinite;
+            animation: move 2.387s ease-in-out -1.722s infinite;
+  }
+  
+  .g-bubble:nth-child(77) {
+    --rotate: calc(114 * 1deg);
+    --dis: calc(41 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    -webkit-animation: move 2.412s ease-in-out -1.536s infinite;
+            animation: move 2.412s ease-in-out -1.536s infinite;
+  }
+  
+  .g-bubble:nth-child(78) {
+    --rotate: calc(65 * 1deg);
+    --dis: calc(73 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    -webkit-animation: move 2.824s ease-in-out -2.763s infinite;
+            animation: move 2.824s ease-in-out -2.763s infinite;
+  }
+  
+  .g-bubble:nth-child(79) {
+    --rotate: calc(72 * 1deg);
+    --dis: calc(73 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9px;
+    height: 9px;
+    -webkit-animation: move 2.274s ease-in-out -0.5s infinite;
+            animation: move 2.274s ease-in-out -0.5s infinite;
+  }
+  
+  .g-bubble:nth-child(80) {
+    --rotate: calc(79 * 1deg);
+    --dis: calc(80 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 4px;
+    -webkit-animation: move 1.542s ease-in-out -1.924s infinite;
+            animation: move 1.542s ease-in-out -1.924s infinite;
+  }
+  
+  .g-bubble:nth-child(81) {
+    --rotate: calc(164 * 1deg);
+    --dis: calc(89 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    -webkit-animation: move 1.525s ease-in-out -1.05s infinite;
+            animation: move 1.525s ease-in-out -1.05s infinite;
+  }
+  
+  .g-bubble:nth-child(82) {
+    --rotate: calc(17 * 1deg);
+    --dis: calc(21 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 23px;
+    height: 23px;
+    -webkit-animation: move 2.981s ease-in-out -0.423s infinite;
+            animation: move 2.981s ease-in-out -0.423s infinite;
+  }
+  
+  .g-bubble:nth-child(83) {
+    --rotate: calc(85 * 1deg);
+    --dis: calc(75 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    -webkit-animation: move 1.772s ease-in-out -2.798s infinite;
+            animation: move 1.772s ease-in-out -2.798s infinite;
+  }
+  
+  .g-bubble:nth-child(84) {
+    --rotate: calc(88 * 1deg);
+    --dis: calc(94 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    -webkit-animation: move 2.89s ease-in-out -1.966s infinite;
+            animation: move 2.89s ease-in-out -1.966s infinite;
+  }
+  
+  .g-bubble:nth-child(85) {
+    --rotate: calc(2 * 1deg);
+    --dis: calc(7 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    -webkit-animation: move 1.528s ease-in-out -0.764s infinite;
+            animation: move 1.528s ease-in-out -0.764s infinite;
+  }
+  
+  .g-bubble:nth-child(86) {
+    --rotate: calc(335 * 1deg);
+    --dis: calc(18 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 26px;
+    height: 26px;
+    -webkit-animation: move 1.547s ease-in-out -1.697s infinite;
+            animation: move 1.547s ease-in-out -1.697s infinite;
+  }
+  
+  .g-bubble:nth-child(87) {
+    --rotate: calc(155 * 1deg);
+    --dis: calc(58 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25px;
+    height: 25px;
+    -webkit-animation: move 2.328s ease-in-out -2.278s infinite;
+            animation: move 2.328s ease-in-out -2.278s infinite;
+  }
+  
+  .g-bubble:nth-child(88) {
+    --rotate: calc(200 * 1deg);
+    --dis: calc(2 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 27px;
+    height: 27px;
+    -webkit-animation: move 1.584s ease-in-out -1.402s infinite;
+            animation: move 1.584s ease-in-out -1.402s infinite;
+  }
+  
+  .g-bubble:nth-child(89) {
+    --rotate: calc(235 * 1deg);
+    --dis: calc(42 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 26px;
+    height: 26px;
+    -webkit-animation: move 2.863s ease-in-out -2.971s infinite;
+            animation: move 2.863s ease-in-out -2.971s infinite;
+  }
+  
+  .g-bubble:nth-child(90) {
+    --rotate: calc(101 * 1deg);
+    --dis: calc(74 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 23px;
+    height: 23px;
+    -webkit-animation: move 2.572s ease-in-out -2.469s infinite;
+            animation: move 2.572s ease-in-out -2.469s infinite;
+  }
+  
+  .g-bubble:nth-child(91) {
+    --rotate: calc(239 * 1deg);
+    --dis: calc(19 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    -webkit-animation: move 2.036s ease-in-out -2.348s infinite;
+            animation: move 2.036s ease-in-out -2.348s infinite;
+  }
+  
+  .g-bubble:nth-child(92) {
+    --rotate: calc(16 * 1deg);
+    --dis: calc(11 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    -webkit-animation: move 2.946s ease-in-out -2.072s infinite;
+            animation: move 2.946s ease-in-out -2.072s infinite;
+  }
+  
+  .g-bubble:nth-child(93) {
+    --rotate: calc(201 * 1deg);
+    --dis: calc(41 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+    -webkit-animation: move 2.694s ease-in-out -0.295s infinite;
+            animation: move 2.694s ease-in-out -0.295s infinite;
+  }
+  
+  .g-bubble:nth-child(94) {
+    --rotate: calc(236 * 1deg);
+    --dis: calc(79 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    -webkit-animation: move 1.64s ease-in-out -1.887s infinite;
+            animation: move 1.64s ease-in-out -1.887s infinite;
+  }
+  
+  .g-bubble:nth-child(95) {
+    --rotate: calc(183 * 1deg);
+    --dis: calc(46 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 13px;
+    height: 13px;
+    -webkit-animation: move 2.024s ease-in-out -1.666s infinite;
+            animation: move 2.024s ease-in-out -1.666s infinite;
+  }
+  
+  .g-bubble:nth-child(96) {
+    --rotate: calc(216 * 1deg);
+    --dis: calc(84 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 26px;
+    height: 26px;
+    -webkit-animation: move 2.011s ease-in-out -0.303s infinite;
+            animation: move 2.011s ease-in-out -0.303s infinite;
+  }
+  
+  .g-bubble:nth-child(97) {
+    --rotate: calc(327 * 1deg);
+    --dis: calc(36 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 9px;
+    height: 9px;
+    -webkit-animation: move 2.768s ease-in-out -2.255s infinite;
+            animation: move 2.768s ease-in-out -2.255s infinite;
+  }
+  
+  .g-bubble:nth-child(98) {
+    --rotate: calc(169 * 1deg);
+    --dis: calc(15 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    -webkit-animation: move 2.348s ease-in-out -0.099s infinite;
+            animation: move 2.348s ease-in-out -0.099s infinite;
+  }
+  
+  .g-bubble:nth-child(99) {
+    --rotate: calc(270 * 1deg);
+    --dis: calc(28 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 14px;
+    height: 14px;
+    -webkit-animation: move 2.413s ease-in-out -2.275s infinite;
+            animation: move 2.413s ease-in-out -2.275s infinite;
+  }
+  
+  .g-bubble:nth-child(100) {
+    --rotate: calc(95 * 1deg);
+    --dis: calc(31 * 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    -webkit-animation: move 2.487s ease-in-out -1.126s infinite;
+            animation: move 2.487s ease-in-out -1.126s infinite;
+  }
+  
+  @-webkit-keyframes move {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    75% {
+      opacity: 0.9;
+    }
+    100% {
+      transform: rotateZ(var(--rotate)) translate(-50%, var(--dis));
+      opacity: 0.4;
+    }
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    75% {
+      opacity: 0.9;
+    }
+    100% {
+      transform: rotateZ(var(--rotate)) translate(-50%, var(--dis));
+      opacity: 0.4;
+    }
+  }
+  @-webkit-keyframes rotate {
+    100% {
+      transform: rotate(-360deg);
+      filter: blur(3px) contrast(3) hue-rotate(360deg);
+    }
+  }
+  @keyframes rotate {
+    100% {
+      transform: rotate(-360deg);
+      filter: blur(3px) contrast(3) hue-rotate(360deg);
+    }
+  }
